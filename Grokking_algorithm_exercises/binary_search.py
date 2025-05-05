@@ -10,14 +10,14 @@ def binary_search(array, item):
         mid = (low + high) // 2
         guess = array[mid]
 
-        if guess == item:
+        if guess == item: #
             return mid
-        elif guess > item:
+        elif guess > item: # the guess was to high
             high = mid - 1
-        else:
+        else: # the guess was to low
             low = mid + 1
 
-    return None  # Fixed: Moved outside the loop
+    return None
 
-my_list = [1, 3, 5, 7, 9]  # Renamed to avoid shadowing 'list'
-print(binary_search(my_list, 3))  # Output: 1 (correct index of 3)
+my_list = [1, 3, 5, 7, 9]
+print(binary_search(my_list, 3))  # Expected output: 1 (correct index of 3)
